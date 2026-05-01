@@ -1,14 +1,17 @@
 # MountainCar-gymnasium: different control policies
-This repository contains a project focused on exploring and implementing different control policies for the MountainCar-v0 environment using the Gymnasium library.
+This repository contains a project focused on exploring and implementing different control policies for the classic MountainCar-v0 environment using the Gymnasium library.
 
-The project evaluates the performance of three distinct policies:
+The goal is to implement, test, and comparatively analyze the performance of three distinct control strategies to find the most effective method for teaching an agent to reach the goal state (the top of the right hill).
 
-Random Policy: An agent that selects actions completely at random.
-Simple Greedy Policy: An agent that makes decisions based on the car’s velocity. Specifically, it moves right if velocity is positive, left if negative, and right if velocity is zero.
-Semi-Greedy Policy: A more sophisticated policy that combines conditional logic with random exploration. It uses velocity to decide actions in certain ranges but resorts to random action selection in others.
-The project involves:
+## Policies Implemented
+The project evaluates the performance of three different agent behaviors:
 
-Implementing and evaluating these policies within the MountainCar-v0 environment.
-Calculating and visualizing the total reward, average reward, and standard deviation of rewards per episode for each policy.
-Analyzing the performance of each policy to determine which one is most effective and understanding the reasons behind their performance differences.
-This project provides a practical implementation and comparative analysis of reinforcement learning strategies for a classic control problem.
+### 1. Random Policy
+- ** Description: ** The agent selects actions entirely at random from the set of possible actions.
+- ** Analysis Goal: ** To serve as a baseline for comparison.
+
+### 2. Simple Greedy Policy
+- ** Description: ** An agent that makes deterministic decisions based solely on the car’s velocity:
+- If velocity is positive * (v > 0) *, take the Right action.
+- If velocity is negative * (v < 0) *, take the Left action.
+- If velocity is zero * (v = 0) *, take the Right action.
