@@ -15,3 +15,9 @@ The project evaluates the performance of three different agent behaviors:
 - If velocity is positive *(v > 0)*, take the Right action.
 - If velocity is negative *(v < 0)*, take the Left action.
 - If velocity is zero *(v = 0)*, take the Right action.
+
+### 3. Semi-Greedy Policy (Conditional + Random)
+- **Description:** A hybrid policy that mixes conditional logic with random exploration:
+- If velocity is greater than *0.02 (v > 0.02)*,  take the Right action.
+- If velocity is less than *0.02 (v < 0.02)*, take the Left action.
+- In all other cases (i.e., when *|v| < 0.02*), the agent selects an action randomly from the possible actions.
