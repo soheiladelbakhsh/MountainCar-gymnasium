@@ -78,8 +78,7 @@ def semi_random():
 
         reward_arr.append(reward)
         position_arr.append(observation[0])
-        print('position:', observation[0])
-        print('velocity:', observation[1])
+
         v = observation[1]
 
         if terminated or truncated:
